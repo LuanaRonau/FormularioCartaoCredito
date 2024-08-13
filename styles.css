@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1F2937;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.875rem;
+}
+
+#card-cartao {
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+
+#credit-card {
+    width: 280px;
+    max-width: 280px;
+    height: 168px;
+    aspect-ratio: 280/168;
+    margin: 18px 0 48px 0;
+    border: 1px solid #374151;
+    border-radius: 16px;
+    object-fit: cover;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+#front {
+    background-image: url('./assets/background_card.png');
+    border-radius: 1rem;
+    position: absolute;
+    padding: 24px;
+    width: 100%;
+    height: 100%;
+}
+
+#top-info-credit-card {
+    opacity: 0.8;
+    margin-top: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#bandeira {
+    background-image: url('./assets/Bandeiras=Visa.png');
+    width: 32px;
+    height: 32px;
+}
+
+#card-number {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.grid-numeros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 4px;
+}
+
+.placeholder-box {
+    width: 8px;
+    height: 16px;
+    position: relative;
+}
+
+.placeholder, .h3-in-placeholder {
+    position: absolute; 
+    top: 0;
+    left: 0;
+}
+
+.placeholder {
+    background-color: rgba(249, 250, 251, 0.5);
+    width: 4px;
+    height: 4px;
+    margin: 2px;
+    border-radius: 50%;
+    top: 15%;
+    left: 0;
+}
+
+.h3-in-placeholder {
+    color: #F9FAFB; 
+    font-weight: 600; 
+    font-size: 1rem;
+    top: -4px;
+    left: 0;
+}
+
+#bottom-info-credit-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.nome-titular {
+    color: rgba(249, 250, 251, 0.5);
+    font-weight: 400;
+}
+
+.highlight {
+    color: #F9FAFB; 
+    font-weight: 600; 
+    font-size: 0.85rem;
+}
+
+#data-card{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+}
+
+#data-divisor {
+    color: rgba(249, 250, 251, 0.5);
+    margin: -4px 2px 0 2px;
+}
+
+
+#back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/background_card_back.png);
+    border-radius: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#rectangle {
+    background-color: #111827;
+    width: 100%;
+    height: 2rem;
+    margin-top: 1rem;
+}
+
+#box-cvv {
+    margin-top: 46px;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+#display-cvv {
+    height: 100%;
+    width: 201px;
+    margin-right: 0.5rem;
+    background-color: #D1D5DB;
+    border-radius: 0.25rem;
+    padding-right: 0.75rem;
+    padding-top: 0.2rem;
+    align-items: center;
+    display: grid;
+    justify-content: end;
+    grid-template-columns: repeat(3, 0.5rem);
+    gap: 0.25rem;
+    color: rgba(17, 24, 39, 0.5);
+}
+
+#display-cvv h3 {
+    color: rgba(17, 24, 39, 1);
+}
+
+.cvv {
+    background-color: rgba(17, 24, 39, 0.5);
+}
+
+#back-cvv {
+    color: #E5E7EB;
+    font-weight: 400;
+}
+
+
+#inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-weight: 600;
+    color: #E5E7EB;
+    margin-bottom: 4px;
+}
+
+.input {
+    padding: 12px;
+    width: 100%;
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #F3F4F6;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.input::placeholder {
+    color: #9CA3AF;
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.input:hover {
+    border: 1.5px solid #4B5563;
+}
+
+.input:focus {
+    border: 1.5px solid #9333EA;
+    outline: none;
+}
+
+#box-input-nome {
+    margin: 12px 0;
+}
+
+.span {
+    display: flex;
+    margin-top: 8px;
+    color: #1F2937; 
+}
+
+.span > h3 {
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+.warning {
+    height: 12.5px;
+    width: 14px;
+    margin: 2px 5px 0 1px;
+    display: none;
+}
+
+#row-input-validade-cvv {
+    display: grid;
+    grid-template-columns: 1.41fr 1fr;
+    gap: 16px;
+}
+
+#label-cvv {
+    display: flex;
+    align-items: center;
+}
+
+#info-icon {
+    width: 13px;
+    height: 13px;
+    margin-bottom: 4px;
+    margin-left: 5.5px;
+}
+
+#safe-info {
+    color: #E5E7EB;
+    display: flex;
+    justify-content: center;
+    margin: 14px 0 14px 0;
+    order: 1;
+}
+
+#safe-info > h3 {
+    font-weight: 400;
+}
+
+#icon-safe {
+    margin-right: 8px;
+    object-fit: contain;
+}
+
+
+#action {
+    margin-top: auto;
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#btn-add-card {
+    width: 100%;
+    height: 56px;
+    background-color: #9333EA;
+    border-radius: 4px;
+    color: #F9FAFB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 507.625px;
+    align-self: center;
+}
+
+#btn-add-card:hover {
+    background-color: #A855F7;
+}
+/*
+#btn-add-card:focus {
+    border: 2px solid #F9FAFB;
+}
+*/
+#btn-add-card:disabled {
+    opacity: 50%;
+}
+
+
+@media (min-width: 736px) {
+
+    body {
+        background-color: #111827;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #box-all {
+        background-color: #1F2937;
+        border: 1px solid #374151;
+        border-radius: 0.5rem;
+        width: 736px;
+        padding: 2rem;
+    }
+
+    #card-cartao {
+        display: grid;
+        padding: 0;
+        grid-template-rows: auto auto;        
+        margin-bottom: 14px;
+    }
+
+    #inputs {
+        grid-column: 1 / 2; 
+        grid-row: 1 / 3;
+        margin-right: 64px;
+    }
+    
+    #credit-card {
+        margin-top: 0;
+        grid-column: 2 / 3; 
+        grid-row: 1 / 2;
+    }
+
+    #safe-info {
+        margin-top: -60px;
+        grid-column: 2 / 3; 
+        grid-row: 2 / 3;
+    }
+
+    #action {
+        padding: 0;
+    }
+
+    #btn-add-card {
+        max-width: none;
+    }
+
+}
